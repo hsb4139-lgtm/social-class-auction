@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #082a8d;
+  --color-sky: #82c4ea;
+  --color-skysoft: #eaf5fc;
+  --color-paper: #f6f9fc;
+}
+
+body {
+  background: var(--color-paper);
+  color: #1f2937;
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif;
+  word-break: keep-all;
+}
+
+@utility card { @apply rounded-2xl bg-white border border-slate-200 shadow-sm; }
+@utility btn { @apply inline-flex items-center justify-center gap-1 rounded-xl px-4 py-2 font-semibold transition disabled:opacity-40 disabled:cursor-not-allowed; }
+@utility btn-primary { @apply btn bg-navy text-white hover:bg-blue-900; }
+@utility btn-soft { @apply btn bg-skysoft text-navy hover:bg-sky/40; }
+@utility btn-danger { @apply btn bg-rose-50 text-rose-700 hover:bg-rose-100; }
+@utility input { @apply w-full rounded-xl border border-slate-300 bg-white px-3 py-2 outline-none focus:border-navy focus:ring-2 focus:ring-sky/50; }
+@utility label { @apply block text-sm font-semibold text-slate-600 mb-1; }
